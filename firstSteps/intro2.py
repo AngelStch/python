@@ -27,12 +27,12 @@
 
 # Write a Python program that accepts six numbers as input and sorts them in descending order.
 # Input consists of six numbers n1, n2, n3, n4, n5, n6 (-100000 <= n1, n2, n3, n4, n5, n6 <= 100000). The six numbers are separated by a space.
-try:
-    nums = map(int, input("Enter the nums you want to sort (6):\n").split())
-    nums = list(nums)
-    if(len(nums)>6):
-        raise ValueError()
-    nums.sort()
-    print(nums)
-except ValueError:
-    print("All numbers must be between -100000 and 100000 and max count is 6")
+# try:
+#     nums = map(int, input("Enter the nums you want to sort (6):\n").split())
+#     nums = list(nums)
+#     if(len(nums)>6):
+#         raise ValueError()
+#     nums.sort()
+#     print(nums)
+# except ValueError:
+#     print("All numbers must be between -100000 and 100000 and max count is 6")
