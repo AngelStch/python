@@ -19,3 +19,9 @@ class main:
         p3.display()
     except Exception as e:
         print(e)
+        
+    try:
+        p3 = Person(-2, "qqqqqqqqqq")  
+        p3.display()
+    except Exception as e:
+        print(e)

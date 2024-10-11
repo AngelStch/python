@@ -27,3 +27,6 @@ def newest_car(Cars ):
       if (car._manifacture_year == 2022):
          sertanBrand.append(car)
    return sertanBrand
+def oldest_car(items:  List[Car] ):
+   sorted_cars = sorted(items, key=lambda car: car._manifacture_year)
+   return sorted_cars[0]
