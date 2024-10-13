@@ -29,3 +29,5 @@ class main:
    newestCars = newest_car(carList)
    for car in newestCars:
       print(car.display_info())
+      print("--------------------------------------")
+      print(oldest_car(carList).display_info())
