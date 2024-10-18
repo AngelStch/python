@@ -43,14 +43,15 @@
 #      print(e) 
 
 # zad 6
-while(True):
-    try:
-        kucheHrana = int(input("hrana za kucheta(opakovki): "))
-        kotkaHr = int(input("hrana za kotkim(opakovki): "))
-        if(kucheHrana<0 or kotkaHr<0):
-            raise ValueError("Hraanata ne moje da e negativna")
-            break
-        print(f"{kucheHrana*2.5+kotkaHr*4} lv.")
+# while(True):
+#     try:
+#         kucheHrana = int(input("hrana za kucheta(opakovki): "))
+#         kotkaHr = int(input("hrana za kotkim(opakovki): "))
+#         if(kucheHrana<0 or kotkaHr<0):
+#             raise ValueError("Hraanata ne moje da e negativna")
+#             break
+#         print(f"{kucheHrana*2.5+kotkaHr*4} lv.")
         
-    except e:
-       print(e)
+#     except e:
+#        print(e)
+
