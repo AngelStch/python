@@ -38,3 +38,49 @@
 #     print(nums)
 # except ValueError:
 #     print("All numbers must be between -100000 and 100000 and max count is 6")
+
+
+# 65. Write a Python program to move all zero digits to the end of a given list of numbers.
+# Expected output
+
+# lst = map(int, input().split(", "))
+# lst = list(lst)
+# for i in range(len(lst)):
+#     if(lst[i] == 0):
+#         lst.remove(0)
+#         lst.append(0)
+#         isDone = True
+#         for j in range(i,len(lst)):
+#             if(lst[j]!=0):
+#                 isDone =False
+#         if(isDone == True):
+#             break
+#         else:
+#             i =0
+# print(lst)
+    
+
+#     Write a Python program to find the list in a list of lists whose sum of elements is the highest.
+# Sample lists: [1,2,3], [4,5,6], [10,11,12], [7,8,9]
+# Expected Output: [10, 11, 12]
+
+# lst = map(str, input().split(", "))
+# lst = list(lst)
+# listCompare = lst.copy()
+# for i in range(len(lst)):
+#     tempStr =  lst[i]
+#     sumTemp =0
+#     lsttemp = tempStr.split(",")
+#     elFirst = list(lsttemp[0])
+#     elFirst.pop(0)
+#     elLast =list(lsttemp[len(lsttemp)-1])
+#     elLast.pop(len(elLast)-1)
+#     lsttemp.pop(0)
+#     lsttemp.pop(len(lsttemp)-1)
+#     lsttemp.insert(0,''.join(elFirst))
+#     lsttemp.insert(len(lsttemp),''.join(elLast))
+#     for j in range(len(lsttemp)):
+#         sumTemp+=int(lsttemp[j])
+#     lst[i] = sumTemp
+# maxSum = lst.index(max(lst))
+# print(listCompare[maxSum])
