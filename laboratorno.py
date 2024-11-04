@@ -80,9 +80,12 @@ while(True):
             clientName = temp[1]
             order = temp[2]
             lst.append((orderNum,clientName,order))
-            break
         except Exception as e:
             print(e)
+    if(command=="unique"):
+        for i in range(len(lst)):
+            print()
+            
 
-print(lst)
+
 
