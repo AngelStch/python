@@ -94,16 +94,46 @@ import math
 #     print(umn(a,b))
 # elif(operation=="^"):
 #     print(stepen(a,b))
-import random
+# import random
 
-def zamenqne(lst,chislo):
-    lst = list(lst)
+# def zamenqne(lst,chislo):
+#     lst = list(lst)
+#     for i in range(len(lst)):
+#         if(lst[i]>chislo):
+#             lst[i]= 0
+
+#     return lst
+
+# lst = [random.randint(0, 100) for i in range(random.randint(0,20))]
+# chislo = int(input())
+# print(zamenqne(lst,chislo))
+lst = []
+
+def add_student(lst,data):
+    name = data[0]
+    age = int(data[1])
+    ocentki = [i for i in range(2,len(data))]
+    student = {"name": name, "age": age,"grades": ocentki}
+    lst.append(student)
+
+def get_average_grade(student):
+    obshto = sum((student.keys.grades))
+    avg = obshto/len(student[grades])
+    return avg
+
+def get_strudents_above_average(lst):
+    lstAbove = []
+    allavg =0
     for i in range(len(lst)):
-        if(lst[i]>chislo):
-            lst[i]= 0
+        allavg += sum(get_average_grade(lst[i]))
+    allavg = allavg/len(lst)
+    for i in range(len(lst)):
+        if (allavg < sum(get_average_grade(lst[i]))):
+            lstAbove.append(lst[i])
+    return lstAbove
 
-    return lst
-    
-lst = [random.randint(0, 100) for i in range(random.randint(0,20))]
-chislo = int(input())
-print(zamenqne(lst,chislo))
+def get_student_name(lst):
+    lstNamens = ""
+    for i in range(len(lst)):
+        lstNamens+=" "+ lst[i][name]
+    print(lstNamens)
