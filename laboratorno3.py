@@ -23,3 +23,19 @@
 # for i in range(len(dictionary)):
 #     print(dictionary[i])
 
+
+m = int(input())
+n = int(input())
+
+a =[]
+for i in range(m):
+    b = []
+    for j in range(n):
+        temp = int(input())
+        b.append(temp)
+    a.append(b)
+
+for i in range(len(a)):
+    print(a[i])
+
+

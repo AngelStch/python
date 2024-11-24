@@ -1,11 +1,12 @@
-# a = input()
+# a = input() 
 # dic = {}
 
-# for i in range(len(a)):
-#     if(a[i] not in dic):
-#         temp = a.replace(a[i], "")
-#         dic[a[i]] = temp
+# for i in range(len(a)): # a[i] = "a"
+#     if(a[i] not in dic): 
+#         temp = a.replace(a[i], "1")  #aaavvfg -> temp = vvfg
+#         dic[a[i]] = temp   # "a" : vvfg
 # print(dic)
+
 
 
 # lst = map(str, input().split(" "))
@@ -23,28 +24,29 @@
 # prin(lst)
 
 
-
-# lst = map(str, input().split(" "))
-# lst = list(lst)
-# maxCount =0
-# maxStastIndex = 0
-# for i in range(len(lst)):
-#     elFirst = lst[i]
-#     stastIndex = i
-#     count = 1
-#     for j in range(i+1, len(lst)):
-#         if(elFirst== lst[j]):
-#             count+=1
-#         else:
-#             break
-#     if(count>maxCount):
-#         maxStastIndex = stastIndex
-#         maxCount = count
-# for i in range(maxStastIndex,len(lst)):
-#     maxCount-=1
-#     print(lst[i], end=",")
-#     if(maxCount==0):
-#         break
+                               
+lst = map(lambda s : str(s), input().split(" ")) 
+lst = list(lst) 
+maxCount =0
+maxStastIndex = 0
+for i in range(len(lst)):
+    elFirst = lst[i]
+    stastIndex = i
+    count = 1
+    for j in range(i+1, len(lst)):  
+        elNext = lst[j]
+        if(elFirst== elNext ):
+            count+=1
+        else:
+            break
+    if(count>maxCount):
+        maxStastIndex = stastIndex
+        maxCount = count
+for i in range(maxStastIndex,len(lst)):
+    maxCount-=1
+    print(lst[i], end=",")
+    if(maxCount==0):
+        break
 
 # import random
 # m = int(input())
@@ -88,55 +90,55 @@
 
 # set1.clear()
 # set2.clear()
+ 
 
+# english_to_bg = {
+#     "hello": "здравей",
+#     "goodbye": "довиждане",
+#     "please": "моля",
+#     "thank you": "благодаря",
+#     "yes": "да",
+#     "no": "не",
+#     "morning": "сутрин",
+#     "night": "нощ",
+#     "friend": "приятел",
+#     "family": "семейство",
+#     "food": "храна",
+#     "water": "вода",
+#     "house": "къща",
+#     "car": "кола",
+#     "book": "книга",
+#     "computer": "компютър",
+#     "phone": "телефон",
+#     "cat": "котка",
+#     "dog": "куче",
+#     "love": "любов"
+# }
 
-english_to_bg = {
-    "hello": "здравей",
-    "goodbye": "довиждане",
-    "please": "моля",
-    "thank you": "благодаря",
-    "yes": "да",
-    "no": "не",
-    "morning": "сутрин",
-    "night": "нощ",
-    "friend": "приятел",
-    "family": "семейство",
-    "food": "храна",
-    "water": "вода",
-    "house": "къща",
-    "car": "кола",
-    "book": "книга",
-    "computer": "компютър",
-    "phone": "телефон",
-    "cat": "котка",
-    "dog": "куче",
-    "love": "любов"
-}
+# command  = input()
+# while(command!="Exit"):
+#     commands = command.split(' ')
+#     if(commands[0]== "add"):
+#         if(commands[1] not in english_to_bg):
+#             english_to_bg[commands[1]] = commands[2]
+#         else:
+#             print("the word alredy exists")
+#     elif(commands[0] == "Print"):
+#         print(english_to_bg)
+#     elif(commands[0]== "remove"):
+#         if(commands[1]  in english_to_bg):
+#             english_to_bg.popitem(commands[1], commands[2])
+#     elif(commands[0]== "chek"):
+#         if(commands[1] in english_to_bg):
+#             print(english_to_bg[commands[1]])            
+#         else:
+#             print("please enter the buldarian meaning")
+#             translate = input()
+#             english_to_bg[commands[1]] = translate
 
-command  = input()
-while(command!="Exit"):
-    commands = command.split(' ')
-    if(commands[0]== "add"):
-        if(commands[1] not in english_to_bg):
-            english_to_bg[commands[1]] = commands[2]
-        else:
-            print("the word alredy exists")
-    elif(commands[0] == "Print"):
-        print(english_to_bg)
-    elif(commands[0]== "remove"):
-        if(commands[1]  in english_to_bg):
-            english_to_bg.popitem(commands[1], commands[2])
-    elif(commands[0]== "chek"):
-        if(commands[1] in english_to_bg):
-            print(english_to_bg[commands[1]])            
-        else:
-            print("please enter the buldarian meaning")
-            translate = input()
-            english_to_bg[commands[1]] = translate
-
-    else:
-        print("wrong command")
-    command = input()
+#     else:
+#         print("wrong command")
+#     command = input()
 
 
 
